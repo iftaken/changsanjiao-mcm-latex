@@ -1,10 +1,10 @@
 % ============================================================
-% 华中杯数学建模竞赛 LaTeX 文档类模板
+% 长三角高校数学建模竞赛 LaTeX 文档类模板
 % ============================================================
 % 基于 cumcmthesis 改造，适配 chapters/ 目录管理结构
 % ============================================================
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
-\ProvidesClass{main}[2026/03/26 v1.0 华中杯数学建模竞赛模板]
+\ProvidesClass{main}[2026/03/26 v1.0 长三角高校数学建模竞赛模板]
 
 %% ------------------------------------------------------------
 %% 选项处理
@@ -119,6 +119,8 @@
 \newcommand*{\kai}{\CJKfamily{kai}}
 \setCJKfamilyfont{song}[AutoFakeBold,Path=./font/]{simsun.ttc}
 \newcommand*{\song}{\CJKfamily{song}}
+\setCJKfamilyfont{li}[AutoFakeBold,Path=./font/]{SIMLI.TTF}
+\newcommand*{\lishu}{\CJKfamily{li}}
 
 %% ------------------------------------------------------------
 %% 行距设置
@@ -251,7 +253,7 @@
     \belowdisplayshortskip 6.5\p@ \@plus3.5\p@ \@minus3\p@}
 
 %% ------------------------------------------------------------
-%% 章节标题格式（华中杯样式）
+%% 章节标题格式（长三角高校数学建模竞赛样式）
 %% ------------------------------------------------------------
 \setcounter{secnumdepth}{3}
 \def\@seccntformat#1{\csname the#1\endcsname\ }
@@ -294,9 +296,6 @@
     \if@twocolumn
         \section*{\abstractname}%
     \else
-        \begin{center}%
-        {\zihao{4}\bfseries \abstractname\vspace{-.5em}\vspace{\z@}}%
-        \end{center}%
         \quotation
     \fi}
     {\if@twocolumn\else\endquotation\newpage\null\fi}
@@ -314,7 +313,7 @@
     \renewcommand{\mcm@tokens@keywords}{#1}
     \par
     \vskip1ex
-    {\noindent\zihao{-4}\heiti 关键词：}~{\mcm@tokens@keywords}
+    {\noindent\zihao{-4}\song 关键字：}~{\zihao{-4}\song\mcm@tokens@keywords}
 }
 
 %% ------------------------------------------------------------
@@ -346,10 +345,10 @@
 %% 承诺书常量
 %% ------------------------------------------------------------
 \newcommand*\mcm@commit@string@headname{赛区评阅编号（由赛区组委会填写）：}
-\newcommand*\mcm@commit@string@titlea{\the\year 华中杯数学建模竞赛}
+\newcommand*\mcm@commit@string@titlea{\the\year 长三角高校数学建模竞赛}
 \newcommand*\mcm@commit@string@titleb{承\hspace{1em}诺\hspace{1em}书}
 \newcommand\mcm@commit@string@contents{\quotation
-我们仔细阅读了《华中杯数学建模竞赛章程》和《华中杯数学建模竞赛参赛规则》。
+我们仔细阅读了《长三角高校数学建模竞赛章程》和《长三角高校数学建模竞赛参赛规则》。
 
 我们完全清楚，在竞赛开始后参赛队员不能以任何方式与队外的任何人交流、讨论与赛题有关的问题。
 
@@ -379,7 +378,7 @@
 \newcommand*\mcm@numberpage@string@headnameb{（由赛区填写）}
 \newcommand*\mcm@numberpage@string@allcountrynum{全国评阅编号：}
 \newcommand*\mcm@numberpage@string@allcountrynumb{（全国组委会填写）}
-\newcommand*\mcm@numberpage@string@titlea{\the\year 华中杯数学建模竞赛}
+\newcommand*\mcm@numberpage@string@titlea{\the\year 长三角高校数学建模竞赛}
 \newcommand*\mcm@numberpage@string@titleb{编\hspace{.5em}号\hspace{.5em}专\hspace{.5em}用\hspace{.5em}页}
 \newcommand*\mcm@numberpage@string@appraiselog{赛区评阅记录（可供赛区评阅时使用）：}
 \newcommand\mcm@numberpage@string@reviewer{\shortstack{评\\ 阅\\ 人}}
@@ -512,9 +511,29 @@
     {\centering \zihao{3}\bfseries \@title\par}
     \vskip1ex
     \else
+    \thispagestyle{empty}
+    \vspace*{-2.12cm}
+    \noindent\makebox[\textwidth][c]{%
+        \fbox{%
+            \parbox[c][1.32cm]{14.90cm}{%
+                \centering
+                \zihao{5}\song 参赛编号:YRDMCM2026 {\color{red}此处请填上你的队伍号}\\[4pt]
+                \zihao{5}\song 选题: \underline{\hspace{3em}} (A或B或C)\quad 参赛赛道: \underline{\hspace{3em}}（本科生、专科生或研究生）%
+            }%
+        }%
+    }\par
+    \vspace*{0.59cm}
+    \makebox[\textwidth][c]{\zihao{2}\song 2026年第六届长三角高校数学建模竞赛}\par
+    \vspace*{0.72cm}
+    {\noindent\zihao{3}\song \hspace{1em}题\hspace{2em}目\hspace{1.5em}%
+    \begin{tabular}[b]{@{}>{\centering\arraybackslash}p{9.69cm}@{}}
+        \@title \\[2pt]
+        \hline
+    \end{tabular}\par}
+    \vspace*{0.07cm}
+    {\centering\zihao{-2}\lishu 摘\hspace{2em}要：\par}
+    \vskip0.5cm
     \setcounter{page}{1}
-    {\centering \zihao{3}\bfseries \@title\par}
-    \vskip1ex
     \fi
 }
 

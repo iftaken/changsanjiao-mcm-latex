@@ -10,6 +10,7 @@ FONT_DIR="font"
 FONT_URLS=(
     "https://cos.huimengxinhe.com/font/simkai.ttf"
     "https://cos.huimengxinhe.com/font/simsun.ttc"
+    "https://cos.huimengxinhe.com/font/SIMLI.TTF"
 )
 
 # 颜色输出
