@@ -523,7 +523,7 @@
         }%
     }\par
     \vspace*{0.59cm}
-    \makebox[\textwidth][c]{\zihao{2}\song 2026年第六届长三角高校数学建模竞赛}\par
+    \makebox[\textwidth][c]{\zihao{2}\song\bfseries 2026年第六届长三角高校数学建模竞赛}\par
     \vspace*{0.72cm}
     {\noindent\zihao{3}\song \hspace{1em}题\hspace{2em}目\hspace{1.5em}%
     \begin{tabular}[b]{@{}>{\centering\arraybackslash}p{9.69cm}@{}}
